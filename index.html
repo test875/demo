@@ -1,37 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-          content="Templates, scripts, add-ons, and resources for your hybrid Ionic app and react native app">
+        content="Templates, scripts, add-ons, and resources for your hybrid Ionic app and react native app">
     <meta name="keywords"
-          content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs,react, react-native, jsx">
-    <meta name="author"
-          content="Code Market">
+        content="html5,javascript,mobile,drifty,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs,react, react-native, jsx">
+    <meta name="author" content="Code Market">
     <title>
-      Ionic | React Native | Flutter | Native Marketplace
+        Ionic | React Native | Flutter | Native Marketplace
     </title>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138656783-2"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'UA-138656783-2');
+        gtag('config', 'UA-138656783-2');
     </script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  </head>
-  
-  <body>
-    <h1>Social Media template</h1>
-    <h1>Cab | Ride | Map template</h1>
-    <h1>Music - Video template</h1>
-    <h1>Chat template</h1>
-    <h1>Food Delivery template</h1>
-    <h1>Ecommerce template</h1>
-    <p>Coming Soon</p>
-  </body>
+</head>
+
+<main class="container page-user ng-scope" ng-app="Market">
+
+    <div class="category-list ng-scope" ng-app="Market" ng-controller="UserCtrl">
+        <div class="category-header user">
+            <img class="clip-circle"
+                src="https://secure.gravatar.com/avatar/237aba0b5c320f55bdc22c346aa95a93?s=96&amp;d=https://pro-icons-avatars.s3.amazonaws.com/img/a2.png"
+                alt="Ajoy Karmakar">
+            <h1 class="name">Ajoy Karmakar</h1>
+            <p>Member since 2017</p>
+            <h4></h4>
+        </div>
+        <div class="content pane active">
+            <!-- ngRepeat: row in filteredResults -->
+            <div class="row ng-scope" ng-repeat="row in filteredResults">
+                <!-- ngRepeat: ion in row -->
+                <ion-listing class="col-sm-3 list-item ng-scope ng-isolate-scope" ng-repeat="ion in row"
+                    category="themes" ion="ion"><a ng-href="/themes/tinder" target="_self" href="/themes/tinder">
+                        <div class="clip-group v2 v3" ng-class="{v2:true, v3:true, v4:false}"><img
+                                ng-src="https://s3.amazonaws.com/ionic-marketplace/tinder/icon.png"
+                                alt="Social App - v2" src="https://s3.amazonaws.com/ionic-marketplace/tinder/icon.png">
+                            <div class="clipping-mask"></div>
+                        </div>
+                        <h4 class="ng-binding">Social App - v2</h4>
+                        <p class="ng-binding">Complete front-end Social App UI</p><!-- ngIf: ion.ratings.length > 0 -->
+                        <div ng-transclude="">
+                        </div>
+                    </a></ion-listing><!-- end ngRepeat: ion in row -->
+                <ion-listing class="col-sm-3 list-item ng-scope ng-isolate-scope" ng-repeat="ion in row"
+                    category="themes" ion="ion"><a ng-href="/themes/myride" target="_self" href="/themes/myride">
+                        <div class="clip-group v2 v3" ng-class="{v2:true, v3:true, v4:false}"><img
+                                ng-src="https://s3.amazonaws.com/ionic-marketplace/myride/icon.png"
+                                alt="MyRide - Cab Booking "
+                                src="https://s3.amazonaws.com/ionic-marketplace/myride/icon.png">
+                            <div class="clipping-mask"></div>
+                        </div>
+                        <h4 class="ng-binding">MyRide - Cab Booking </h4>
+                        <p class="ng-binding">Beautiful complete cab ride app UI </p>
+                        <!-- ngIf: ion.ratings.length > 0 -->
+                        <div ng-transclude="">
+                        </div>
+                    </a></ion-listing><!-- end ngRepeat: ion in row -->
+                <ion-listing class="col-sm-3 list-item ng-scope ng-isolate-scope" ng-repeat="ion in row"
+                    category="themes" ion="ion"><a ng-href="/themes/mvplayer" target="_self" href="/themes/mvplayer">
+                        <div class="clip-group v2 v3" ng-class="{v2:true, v3:true, v4:false}"><img
+                                ng-src="https://s3.amazonaws.com/ionic-marketplace/mvplayer/icon.png"
+                                alt="MusicVideoPlayer"
+                                src="https://s3.amazonaws.com/ionic-marketplace/mvplayer/icon.png">
+                            <div class="clipping-mask"></div>
+                        </div>
+                        <h4 class="ng-binding">MusicVideoPlayer</h4>
+                        <p class="ng-binding">Play Music and Video, it's a complete app theme.</p>
+                        <!-- ngIf: ion.ratings.length > 0 -->
+                        <div ng-transclude="">
+                        </div>
+                    </a></ion-listing><!-- end ngRepeat: ion in row -->
+                <ion-listing class="col-sm-3 list-item ng-scope ng-isolate-scope" ng-repeat="ion in row"
+                    category="themes" ion="ion"><a ng-href="/themes/multichat-whats-app-" target="_self"
+                        href="/themes/multichat-whats-app-">
+                        <div class="clip-group v2 v3" ng-class="{v2:true, v3:true, v4:false}"><img
+                                ng-src="https://s3.amazonaws.com/ionic-marketplace/multichat-whats-app-/icon.jpg"
+                                alt="MultiChat - Whats App"
+                                src="https://s3.amazonaws.com/ionic-marketplace/multichat-whats-app-/icon.jpg">
+                            <div class="clipping-mask"></div>
+                        </div>
+                        <h4 class="ng-binding">MultiChat - Whats App</h4>
+                        <p class="ng-binding">A complete clone of whats app in a fresh layout.</p>
+                        <!-- ngIf: ion.ratings.length > 0 -->
+                        <div ng-transclude="">
+                        </div>
+                    </a></ion-listing><!-- end ngRepeat: ion in row -->
+            </div><!-- end ngRepeat: row in filteredResults -->
+            <div class="row ng-scope" ng-repeat="row in filteredResults">
+                <!-- ngRepeat: ion in row -->
+                <ion-listing class="col-sm-3 list-item ng-scope ng-isolate-scope" ng-repeat="ion in row"
+                    category="themes" ion="ion"><a ng-href="/themes/pro-ecommerce-theme" target="_self"
+                        href="/themes/pro-ecommerce-theme">
+                        <div class="clip-group v2 v3" ng-class="{v2:true, v3:true, v4:false}"><img
+                                ng-src="https://s3.amazonaws.com/ionic-marketplace/pro-ecommerce-theme/icon.png"
+                                alt="Pro Ecommerce  Theme "
+                                src="https://s3.amazonaws.com/ionic-marketplace/pro-ecommerce-theme/icon.png">
+                            <div class="clipping-mask"></div>
+                        </div>
+                        <h4 class="ng-binding">Pro Ecommerce Theme </h4>
+                        <p class="ng-binding">Complete Ecommerce app</p><!-- ngIf: ion.ratings.length > 0 -->
+                        <div ng-transclude="">
+                        </div>
+                    </a></ion-listing><!-- end ngRepeat: ion in row -->
+                <ion-listing class="col-sm-3 list-item ng-scope ng-isolate-scope" ng-repeat="ion in row"
+                    category="themes" ion="ion"><a ng-href="/themes/social-theme" target="_self"
+                        href="/themes/social-theme">
+                        <div class="clip-group v2 v3" ng-class="{v2:true, v3:true, v4:false}"><img
+                                ng-src="https://s3.amazonaws.com/ionic-marketplace/social-theme/icon.jpg"
+                                alt="Social Theme "
+                                src="https://s3.amazonaws.com/ionic-marketplace/social-theme/icon.jpg">
+                            <div class="clipping-mask"></div>
+                        </div>
+                        <h4 class="ng-binding">Social Theme </h4>
+                        <p class="ng-binding">A beautiful complete social app theme.Please visit to know more.</p>
+                        <!-- ngIf: ion.ratings.length > 0 -->
+                        <div ng-transclude="">
+                        </div>
+                    </a></ion-listing><!-- end ngRepeat: ion in row -->
+            </div><!-- end ngRepeat: row in filteredResults -->
+            <!-- ngIf: filteredResults.length == 0 -->
+        </div>
+    </div>
+</main>
+
+</body>
+
 </html>
